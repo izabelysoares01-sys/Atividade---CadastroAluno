@@ -1,1 +1,38 @@
+@model CadastroAluno.Models.Aluno
+
+@{
+ViewData["Title"] = "Cadastro Realizado!";
+}
+
+<div class="container mt-4">
+
+<div class="alert alert-success">
+<strong> Cadastro realizado com sucesso!</strong>
+</div>
+
+<h3>Dados do Aluno Cadastrado</h3>
+<hr />
+
+<dl class="row">
+<dt class="col-sm-3">Nome</dt>
+<dd class="col-sm-9">@Model.Nome</dd>
+
+<dt class="col-sm-3">E-mail</dt>
+<dd class="col-sm-9">@Model.Email</dd>
+
+<dt class="col-sm-3">RA</dt>
+<dd class="col-sm-9">@Model.RA</dd>
+
+<dt class="col-sm-3">Curso</dt>
+<dd class="col-sm-9">@Model.Curso</dd>
+
+<dt class="col-sm-3">Data de Nascimento</dt>
+<dd class="col-sm-9">@Model.DataNascimento.ToString("dd/MM/yyyy")</dd>
+</dl>
+
+<a asp-action="Cadastrar" asp-controller="Aluno" class="btn btn-outline-primary mt-2">
+Cadastrar outro aluno
+</a>
+
+</div>
 
